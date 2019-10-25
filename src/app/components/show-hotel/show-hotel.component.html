@@ -1,0 +1,57 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<app-navbar-home></app-navbar-home>
+<section id=filter>
+
+  <div class="container">
+    <div class="row"> 
+      <div class="col-md-4">
+        <div class="check">
+        <h4>Filter</h4><br><br>
+        <a>Type</a><br><br>
+        <mat-checkbox [value]="season">Hotel</mat-checkbox><br>
+        <mat-checkbox [value]="season">Hostel</mat-checkbox><br>
+        <mat-checkbox [value]="season">Resort</mat-checkbox><br><br>
+
+        <a>Price</a><br><br>
+        <mat-slider
+        thumbLabel
+        [displayWith]="formatLabel"
+        tickInterval="0"
+        min="100"
+        max="20000"></mat-slider>
+        <br>
+        <a>Rank</a><br><br>
+        <mat-checkbox [value]="season">5ดาว</mat-checkbox><br>
+        <mat-checkbox [value]="season">4ดาว</mat-checkbox><br>
+        <mat-checkbox [value]="season">3ดาว</mat-checkbox><br>
+        <mat-checkbox [value]="season">2ดาว</mat-checkbox><br>
+        <mat-checkbox [value]="season">1ดาว</mat-checkbox><br>
+        </div>
+      </div>
+      <div class="col-md-8">
+        <div class="card mb-3" style="max-width: 900px;"*ngFor="let data of Accommodation">
+            <div class="row no-gutters">
+              <div class="col-md-4">
+                <img src="assets/1867_ho_00_p_1024x768.jpg" class="card-img" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">{{data.value.name}} </h5>
+                  <p class="card-text">{{data.value.place}} &nbsp; {{data.value.type}}</p>
+                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                  <a class="btn btn-primary" (click)="Go(data)" style="color: white;">Visit</a>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+
+
+    </div>
+      
+   
+  </div>
+</section>
+
+    

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" >
+</head>
+<body>
+
+    <section>
+        <div class="container">
+               <h3>Let's Register with us</h3>
+           <form #hotel="ngForm">
+             
+                      <mat-horizontal-stepper>
+                          <mat-step label="profile">
+                             
+                            <mat-form-field>
+                                <input  matInput  placeholder="firstname" type="text"  name="firstname"  ngModel [(ngModel)]="userlist.firstname" >
+                            </mat-form-field> <br>
+                            <mat-form-field>
+                                    <input  matInput  placeholder="lastname" type="text"  name="lastname" ngModel  [(ngModel)]="userlist.lastname" >
+                            </mat-form-field> <br>   
+                            <mat-form-field>
+                                    <input  matInput  placeholder="email" type="email"  name="email" ngModel  [(ngModel)]="userlist.email" >
+                            </mat-form-field><br>
+                            <mat-form-field>
+                                <input  matInput  placeholder="password" type="password"  name="password"  ngModel [(ngModel)]="userlist.password" >
+                        </mat-form-field><br>
+                            <mat-form-field>
+                                    <input  matInput  placeholder="phone" type="tel"  name="phone" ngModel  [(ngModel)]="userlist.phone" ><br>  
+                                </mat-form-field> &nbsp; <button class="btn btn-primary">OTP</button>
+                          </mat-step>
+                          <mat-step label="Confirm yourself by ID Card">
+                                <mat-form-field>
+                                        <input matInput placeholder="ID CARD" type="text" name="IDCARD" ngModel [(ngModel)]="userlist.IDCARD">
+                                    </mat-form-field><br>
+                               <mat-form-field>
+                                   <input matInput placeholder="firstname in idcard" name="firstnameID"  ngModel [(ngModel)]="userlist.firstnameID">
+                               </mat-form-field><br>
+                               <mat-form-field>
+                                    <input matInput placeholder="lastname in idcard" name="lastnameID"  ngModel [(ngModel)]="userlist.lastnameID">
+                                </mat-form-field><br>
+                                    
+                                <mat-form-field>
+                                    <textarea matInput placeholder="address in idcard" name="addressID"ngModel [(ngModel)]="userlist.addressID" ></textarea>
+                                </mat-form-field><br>
+                                <mat-form-field>
+                                        <input matInput placeholder="postal code" name="postalcode"  ngModel  [(ngModel)]="userlist.postalcode">
+                                </mat-form-field><br>
+
+                               
+                            
+                          </mat-step>
+                          <mat-step label="Hotel Lisence ">
+                                <div class="upload-btn-wrapper">
+                                        <button class="btn">Upload a file</button>
+                                        <input type="file" name="myfile" (change)="fileProgress($event)"   ngModel name="license" [(ngModel)]="license"/>
+                                      </div>
+                                      <div *ngIf="fileUploadProgress">
+                                            Upload progress: {{ fileUploadProgress }}
+                                        </div>
+                                        <div class="image-preview mb-3" *ngIf="previewUrl">
+                                            <img [src]="previewUrl" height="300" />                 
+                                        </div>
+                             
+                                        <div class="mb-3" *ngIf="uploadedFilePath">
+                                            {{uploadedFilePath}}
+                                        </div>     
+                                
+                          </mat-step>
+
+                       </mat-horizontal-stepper>   
+                    <button class="btn btn-primary"  (click)="HotelAcccouct(hotel)">send</button>
+           </form>
+    
+        </div>
+    </section>
+    
+<router-outlet></router-outlet>
+</body>
+</html>

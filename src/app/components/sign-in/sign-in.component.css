@@ -1,0 +1,31 @@
+.authBlock{
+    border: 1px solid black ;
+    width: 300px ;
+    height: 370px;
+    
+}
+body {
+    height: 100vh;
+}
+.form{
+    margin-top: 10% ;
+    padding: 20px ;
+}
+.formGroup .formControl  {
+ border: 1px solid gray ;
+ background: none ;
+ margin-top: 5px ;
+ width: 90% ;
+ padding: 5px ;
+ border-radius: 20px ;
+
+}
+.formGroup button , .btn  {
+    border: 1px solid gray ;
+    background: none ;
+    margin-top: 5px ;
+    width: 90% ;
+    padding: 5px ;
+    
+   
+   }

@@ -1,0 +1,60 @@
+
+<div class="container">
+    <mat-horizontal-stepper>
+    <mat-step label="Place">
+            <form (ngSubmit)="addWiki(wikiForm)" #wikiForm="ngForm"> 
+                    <div class="form-group">
+                    
+                      
+                      <label for="exampleFormControlInput1">ชื่อที่พัก</label>
+                      <input type="text" class="form-control" id="exampleFormControlInput1" [(ngModel)]="wikiForm.name" name="name" >
+                    </div>
+                    <div class="form-group">
+                            <label for="exampleFormControlTextarea1">เกี่ยวกับที่พัก</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" [(ngModel)]="wikiForm.tagline" name="tagline" ></textarea>
+                          </div>
+                    <div class="form-group">
+                      <label for="exampleFormControlSelect1">ประเภท</label>
+                      <select class="form-control" id="exampleFormControlSelect1" [(ngModel)]="wikiForm.type" name="type" >
+                        <option>Hotel</option>
+                        <option>Hostel</option>
+                        <option>GuestHouse</option>
+                        <option>Resort</option>
+                      </select>
+                    </div>
+                   
+                    <div class="form-group">
+                      <label for="exampleFormControlTextarea1">ที่อยู่ที่พัก</label>
+                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" [(ngModel)]="wikiForm.place" name="place" ></textarea>
+                    </div>
+                  
+                  <label for="exampleFormControlInput1">พิกัดแผนที่โรงแรม</label>
+                  <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="ละติจูด : 14.1006,ลองจิจูด : 11.569" [(ngModel)]="wikiForm.coordinate" name="coordinate" >
+                  
+                        <div class="form-group">
+                          <label for="exampleFormControlFile1">รูปภาพ</label>
+                          <input type="file" class="form-control-file" id="exampleFormControlFile1" [(ngModel)]="wikiForm.pic" name="pic" >
+                        </div>
+                    <button type="submit" class="btn btn-primary" (click)="addWiki(wikiForm)">Submit</button>
+                        
+          </form>
+    </mat-step>
+    <mat-step label="infomation">
+      <form>
+         <label>สิ่งอำนวยความสะดวกของโรงแรม</label><br>
+        <input type="checkbox">แอร์<br>
+        <input type="checkbox">Wifi<br>
+        <input type="checkbox">ลานจอดรถ<br>
+        <input type="checkbox">มีรถให้เช่า<br>
+        <input type="checkbox">มีรถรับ-ส่งสนามบิน<br>
+      </form>
+      
+    </mat-step>
+    <mat-step label="room">
+        3
+    </mat-step>
+    <mat-step label="finish">
+            <button  class="btn btn-primary" type="submit" value="submit" [routerLink]="['/home']"  >Send</button>
+        </mat-step>
+</mat-horizontal-stepper>
+</div>

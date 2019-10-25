@@ -1,0 +1,66 @@
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<link
+  href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+  rel="stylesheet"
+/>
+
+<div class="contianer">
+  <aside class="sidebar">
+    <div class="navSide">
+      <h1 id="Hi">Hi</h1>
+      <ul [routerLink]="['/admindashboard']">
+        <a><img src="assets/layout.png"  height="25px"> Dashboard</a>
+      </ul>
+      <ul [routerLink]="['/user']"><a  id="userlink" ><img src="assets/user.png"  height="25px">  User</a></ul>
+      <ul [routerLink]="['/enterpernure-account']"><a> <img src="assets/account.png"  height="25px"> Enterpernuer Account</a></ul>
+      <ul [routerLink]="['/enterpernure-accountconfirm']"><a> <img src="assets/check-square.png" height="23px"> Enterpernuer Confirmed!</a></ul>
+      <ul [routerLink]="['/allbooking']"><a><img src="assets/book.png" height="30px"> Booking</a></ul>
+    </div>
+  </aside>
+
+  <div class="content">
+    <header class="header">
+      <div class="menuHead">
+        <a [routerLink]="['/home']">Home</a>
+        <a (click)="Auth.SignOutForAdmin()">Logout</a>
+      </div>
+    </header>
+    <section class="main"> 
+      <div class="container">
+
+      <button mat-button (click)="openDialog()"> + Add User</button>
+
+      <table class="table table-hover table-white " >
+        <thead>
+          <tr>
+            
+            <th scope="col">firstname</th>
+            <th scope="col">lastname</th>
+            <th scope="col">email</th>
+            <th scope="col">password</th>
+            <th scope="col"></th> 
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let data of userlist">
+            <td>{{data.value.firstname}}</td>
+            <td>{{data.value.lastname}}</td>
+            <td>{{data.value.email}}</td>
+            <td>{{data.value.password}}</td>
+            <td><i class="fa fa-trash" aria-hidden="true" (click)="deleteUser(data)" ></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-pencil" aria-hidden="true" (click)="editWiki(data)"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-ban" aria-hidden="true"></i>
+            </td>
+      
+          </tr>
+         <mat-paginator [length]="100"
+              [pageSize]="10"
+              [pageSizeOptions]="[5, 10, 25, 100]"  (changePage)="onChangePage($event)">
+        </mat-paginator>
+        </tbody>
+        
+      </table>
+    
+    </div>
+    </section>
+  </div>
+</div>

@@ -1,0 +1,28 @@
+
+<form  #SignUpForm="ngForm">
+    <div class="displayTable">
+   <div class="displayTableCell">
+ 
+     <div class="authBlock">
+       
+         <div class="form">
+           <h3>Add User</h3>
+       <div class="formGroup">
+        <input type="firstname" class="formControl" placeholder="firstname" #userfirstname required [(ngModel)]="SignUpForm.firstname" name="firstname">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="lastname" class="formControl" placeholder="lastname" #userlastname required [(ngModel)]="SignUpForm.lastname" name="lastname">
+      </div>
+          <br>
+        <div class="formGroup">   
+         <input type="email" class="formControl" placeholder="Email Address" #userEmail required  [(ngModel)]="SignUpForm.email" name="email">
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         <input type="password" class="formControl" placeholder="Password" #userPwd required [(ngModel)]="SignUpForm.password" name="password">
+       </div>
+       <br>
+       <div class="formGroup">
+         <input type="button" class="btn btn-outline-success" value="Create" (click)="authService.AddUser(userEmail.value, userPwd.value,SignUpForm)">
+         &nbsp;&nbsp;&nbsp;
+         <button mat-button (click)="onNoClick()">Exit</button>
+        </div>
+ 
+

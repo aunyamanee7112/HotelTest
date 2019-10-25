@@ -1,0 +1,54 @@
+body{
+    background: url(forrest2.jpg);
+    background-size: cover ; 
+    height: 100vh ;
+}
+@import url('https://fonts.googleapis.com/css?family=Lexend+Deca&display=swap');
+                     
+main {
+    padding-top: 15%;
+    margin-left: 25%; 
+}
+form input[type=text ]{
+      padding: 25px ;
+      width: 70%;
+      border: none;
+      box-shadow: 2px 2px 7px  rgba(0, 0, 0, 0.459); 
+      font-family: 'Kanit', sans-serif;
+      font-size:20px; 
+      
+}
+form input[type=date ]{
+      padding: 25px ;
+      width: 35%; 
+      border: none;
+      
+      box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.452) ; 
+      font-family: 'Kanit', sans-serif;
+      font-size:20px; 
+      
+}
+form input[type=submit ]{
+      padding: 25px ;
+      width: 70%; 
+      border: none;
+      background :rgb(54, 83, 247) ;
+      box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.452) ;
+      font-family: 'Lexend Deca', sans-serif;
+      font-size:20px;
+      color: white ; 
+     
+
+}
+form input[type=submit ]:hover {
+      
+     background :rgb(68, 95, 248) ;
+      color: white ; 
+
+}
+form h3 {
+  color: white  ;
+}
+#search{
+      cursor: pointer;
+}

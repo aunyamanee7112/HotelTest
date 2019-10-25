@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" >
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+    <title>Document</title>
+</head>
+<body>
+  <section id="menu">
+    <!---- img src="light.png" width="70" height="70" class="imglogo"----> 
+    <ul class="main-nav" *ngIf="authService.userData as user">
+        <li class="act"><a href="home">HOME</a></li>
+        <li><a href="#"><span>Travel Blog</span></a></li>
+        <li><a href="#">Promotion</a></li>
+        <li><a [routerLink]="['/dashboard']">Hi! {{user.email}}</a></li>
+        <li><a (click)="authService.SignOut()" style="cursor: pointer;">logout</a></li>
+    </ul>
+</section>
+<section id="slide">
+    
+                
+       <div class="container slides">
+        
+       <div> 
+         <div class="row">
+           <div class="col-md-11">  
+                <h1>{{hotellist.name}}</h1> 
+           </div>
+           <div class="col-md-1">
+              <button mat-icon-button color="warn"  style="width: 70px; height:70px " aria-label="Example icon-button with a heart icon" (click)="fav(hotellist)">
+                  <mat-icon>favorite</mat-icon>
+              </button>
+           </div>
+         </div>
+         
+       
+      </div>
+       
+            
+        <div id="demo" class="carousel slide" data-ride="carousel">
+
+                <!-- Indicators -->
+                <ul class="carousel-indicators">
+                  <li data-target="#demo" data-slide-to="0" class="active"></li>
+                  <li data-target="#demo" data-slide-to="1"></li>
+                  <li data-target="#demo" data-slide-to="2"></li>
+                </ul>
+              
+                <!-- The slideshow -->
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="assets/home-slide-05.jpg" alt="Los Angeles">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="assets/1867_ho_00_p_1024x768.jpg" alt="Chicago">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="/src/assets/https _s.yimg.com_os_creatr-images_2019-07_0990ecc0-b23e-11e9-b3d9-edcf534c3626.jfif" alt="New York">
+                  </div>
+                </div>
+              
+                <!-- Left and right controls -->
+                <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                  <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#demo" data-slide="next">
+                  <span class="carousel-control-next-icon"></span>
+                </a>
+              
+              </div>        
+</div>
+</section>
+        <div class='container info'>
+          <div class="row">
+            <div class="col-md-3">
+                <div class="card " style="width: 17rem; ">
+                    <div class="card-body">
+                      <h5 class="card-title">Map</h5>
+                      <div id="map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d982851.6316388351!2d103.83698948891964!3d15.789189599814659!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31162da17993d189%3A0x564f7c1b5532ba97!2sYasothon!5e0!3m2!1sen!2sth!4v1562850913139!5m2!1sen!2sth"    frameborder="0" style="border:0" allowfullscreen></iframe>
+                          </div>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-md-9">
+              <div class="card">
+            <div class="card-body">
+              <h4>{{hotellist.name}}</h4><br>
+              type : {{hotellist.type}}<br>
+              Place :{{hotellist.place}} <br>
+              Neighborhood : {{hotellist.tagline}}
+              
+            </div>
+          </div>
+            </div>
+          </div>
+        </div>
+<section>
+        <div class='container'>
+         
+        </div>
+        
+</section>
+<section id="room">
+ 
+  <div class="container room">
+     <h2>Room</h2>
+    <div class="card mb-3" style="max-width: 100%;">
+      <div class="row no-gutters">
+        <div class="col-md-4">
+          <img src="/assets/https _s.yimg.com_os_creatr-images_2019-07_0990ecc0-b23e-11e9-b3d9-edcf534c3626.jfif" class="card-img" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">Name</h5>
+            <p class="card-text">Detail</p>
+            <p class="card-text"><small class="text-muted"></small></p>
+            <button mat-button class="bookingbtn" (click)=booking()>Booking Now</button>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+<section id="review">
+
+</section>
+</body>
+</html>

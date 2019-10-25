@@ -1,0 +1,35 @@
+
+#menu{
+    width: 100% ; 
+    position: fixed;    
+    left: 50%;
+    top: 0%;
+    transform: translateX(-50%) translateY(0%) ;
+    background: white;
+    box-shadow: 3px 3px 6px rgba(128, 128, 128, 0.363) ;
+    z-index: 10;
+
+}
+.main-nav{
+    float: right;
+    list-style: none;
+    margin-top: 20px ;
+
+   
+}
+.main-nav li {
+    display: inline-block;   
+    padding-right: 25px ; 
+
+}
+.main-nav li a {
+    color : black ;
+    text-decoration: none ; 
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ; 
+     
+}
+
+
+.main-nav li a:hover {
+    color: gray ;   
+ }

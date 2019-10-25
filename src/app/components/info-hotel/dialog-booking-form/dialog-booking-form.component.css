@@ -1,0 +1,13 @@
+.exampleFormControlInput2 {
+ width: 50% ;
+}
+.checkin-out input{
+    border: none;
+    border-bottom: 1px solid gray;
+    
+}
+.checkin-out{
+    background: none;
+    
+    padding: 10px;
+}

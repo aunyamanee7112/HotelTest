@@ -1,0 +1,60 @@
+
+#menu{
+    width: 100% ; 
+    position: fixed;    
+    left: 50%;
+    top: 0%;
+    transform: translateX(-50%) translateY(0%) ;
+    background: white;
+
+}
+.main-nav{
+    float: right;
+    list-style: none;
+    margin-top: 20px ;
+
+   
+}
+.main-nav li {
+    display: inline-block;   
+    padding-right: 25px ; 
+
+}
+.main-nav li a {
+    color : rgb(146, 145, 145) ;
+    text-decoration: none ; 
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ; 
+     
+}
+.main-nav li  #login {
+    color : rgb(146, 145, 145) ;
+    border: 1px solid rgb(146, 145, 145) ;
+    text-decoration: none ; 
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ; 
+    padding: 10px ;
+    padding-left: 20px ;
+    padding-right: 20px ;
+} 
+.main-nav li  #login:hover {
+    color : white ;
+    border: 1px solid white ;
+    background: rgb(68, 95, 248);
+} 
+.main-nav li  #Enterprenuer {
+    color : rgb(146, 145, 145) ;
+    border: 1px solid rgb(146, 145, 145) ;
+    text-decoration: none ; 
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ; 
+    padding: 10px ;
+    padding-left: 20px ;
+    padding-right: 20px ;
+} 
+.main-nav li  #Enterprenuer:hover {
+    color : white ;
+    border: 1px solid white ;
+    background: tomato;
+} 
+
+.main-nav li a:hover {
+    color: black ;   
+ }

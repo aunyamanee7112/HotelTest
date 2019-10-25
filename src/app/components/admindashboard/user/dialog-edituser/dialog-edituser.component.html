@@ -1,0 +1,28 @@
+<form >
+    <div class="displayTable">
+   <div class="displayTableCell">
+ 
+     <div class="authBlock">
+       
+         <div class="form" >
+           <h3>Edit</h3>
+       <div class="formGroup"  >
+        <input type="text" class="formControl" placeholder="Firstname"  required   id="firstname" [(ngModel)]="edit.firstname" name="firstname">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="text" class="formControl" placeholder="Lastname" required  [(ngModel)]="edit.lastname" name="lastname">
+      </div>
+            <br>
+        <div class="formGroup">   
+         <input type="email" class="formControl" placeholder="Email Address" required     [(ngModel)]="edit.email" name="email">
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         <input type="password" class="formControl" placeholder="Password"  required    [(ngModel)]="edit.password" name="password">
+       </div>
+       
+       <br>
+       <div class="formGroup">
+          <button  class="btn btn-outline-success" type="submit" >Update</button>
+          &nbsp;&nbsp;&nbsp;
+        <button mat-button (click)="onNoClick()">Exit</button>
+        </div>
+ 
+

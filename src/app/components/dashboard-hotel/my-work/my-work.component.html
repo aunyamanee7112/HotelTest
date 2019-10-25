@@ -1,0 +1,41 @@
+
+<div class="contianer">
+        <aside class="sidebar">
+            <div class="navSide">
+                    <h1 id="Hi">Hi</h1>
+                    <ul><a  ><img src="assets/layout.png"  height="25px"> Dashboard</a></ul>
+                    <ul [routerLink]="['/my-profile']"><a> <img src="assets/user.png"  height="25px">  Profile</a></ul>
+                    <ul  [routerLink]="['/my-work']"><a> <img src="assets/website.png"  height="25px"> MyWork</a></ul>
+                    <ul  [routerLink]="['/my-order']"><a> <img src="assets/calendar.png"  height="25px"> Booking</a></ul>
+            </div>
+                   
+                
+        </aside>
+        <div class="content">
+            <header class="header">
+                    <div class="menuHead">
+                    <a [routerLink]="['/home']"  >Home</a>
+                    <a (click)="authService.SignOut()">Logout</a>  
+                    </div>
+                    
+            </header>
+            <section class="main">
+                    <div class="callForm">
+                        <button mat-fab color="primary" id="Add" [routerLink]="['/stepper-from']"  >Add</button>
+                    </div>
+                    
+                <div class="box">
+                        <div class="card" style="width: 18rem;">
+                                <img src="assets/1867_ho_00_p_1024x768.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                  <h5 class="card-title">โรงแรมล้านนา</h5>
+                                  <p class="card-text">15 july 2019<p>
+                                  <a href="#" class="btn btn-primary">Edit</a>&nbsp;
+                                  <a href="#" class="btn btn-primary" style="background: red ; border: none">delete</a>
+                                </div>
+                              </div>
+                </div>
+                   
+            </section>
+        </div>
+    </div>

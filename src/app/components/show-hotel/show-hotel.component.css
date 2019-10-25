@@ -1,0 +1,29 @@
+.check {
+    width: 300px ;
+    height: 700px;
+    border: 1px solid rgb(185, 185, 185) ;
+    z-index: 10;
+   
+    margin-left: 5%;
+    padding-left: 20px ;
+    
+}
+.check h4 {
+    padding-top: 20px ;
+}
+
+mat-slider {
+    width: 250px;
+  }
+.example-radio-group {
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0;
+}
+  
+.example-radio-button {
+    margin: 5px;
+}
+.container {
+    margin-top: 10% ;
+}

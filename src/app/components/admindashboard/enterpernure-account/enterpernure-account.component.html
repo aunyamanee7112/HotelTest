@@ -1,0 +1,57 @@
+
+<div class="contianer">
+        <aside class="sidebar">
+            <div class="navSide">
+                    <h1 id="Hi">Hi</h1>
+                    <ul [routerLink]="['/admindashboard']">
+                      <a><img src="assets/layout.png"  height="25px"> Dashboard</a>
+                    </ul>
+                    <ul [routerLink]="['/user']"><a  id="userlink" ><img src="assets/user.png"  height="25px">  User</a></ul>
+                    <ul [routerLink]="['/enterpernure-account']"><a> <img src="assets/account.png"  height="25px"> Enterpernuer Account</a></ul>
+                    <ul [routerLink]="['/enterpernure-accountconfirm']"><a> <img src="assets/check-square.png" height="23px"> Enterpernuer Confirmed!</a></ul>
+                    <ul [routerLink]="['/allbooking']"><a><img src="assets/book.png"  height="25px"> Booking</a></ul>
+            </div>
+                   
+                
+        </aside>
+        <div class="content">
+            <header class="header">
+                    <div class="menuHead">
+                    <a [routerLink]="['/home']"  >Home</a>
+                    <a (click)="Auth.SignOutForAdmin()">Logout</a>  
+                    </div>
+                    
+            </header>
+            <section class="main">
+                    <div class="container">
+                            <table class="table table-hover table-white " >
+                              <thead>
+                                <tr>
+                                  
+                                  <th scope="col">firstname</th>
+                                  <th scope="col">lastname</th>
+                                  <th scope="col">email</th>
+                                  <th scope="col">password</th>
+                                  <th scope="col">IDCARD</th>
+                                  <th scope="col">phone</th>
+                                  <th scope="col"></th> 
+                                  <th scope="col"></th> 
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr *ngFor="let data of userlist">
+                                  <td>{{data.value.firstname}}</td>
+                                  <td>{{data.value.lastname}}</td>
+                                  <td>{{data.value.email}}</td>
+                                  <td>{{data.value.password}}</td>
+                                  <td>{{data.value.IDCARD}}</td>
+                                  <td>{{data.value.phone}}</td>
+                                  <td class="btnaccept"><div class="div"><button type="button" (click)="accept(data)"   style="font-size: 14px;"class="btn btn-outline-success btn-sm">Accept</button></div></td>
+                                  <td class="btnunaccept"><div class="div"><button type="button" (click)="unaccept(data)" style="font-size: 14px;" class="btn btn-outline-danger btn-sm">unaccept</button></div></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+            </section>
+        </div>
+    </div>

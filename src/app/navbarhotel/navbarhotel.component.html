@@ -1,0 +1,12 @@
+<section id="menu">
+        <!---- img src="light.png" width="70" height="70" class="imglogo"----> 
+        <ul class="main-nav" *ngIf="authService.userData as user">
+            <li class="act"><a href="home">HOME</a></li>
+            <li><a href="#"><span>Travel Blog</span></a></li>
+            <li><a href="#">Promotion</a></li>
+            <li><a [routerLink]="['/dashboard-hotel']">Hi! {{user.email}}</a></li>
+            <li><a (click)="authService.SignOut()" style="cursor: pointer;">logout</a></li>
+        
+            
+        </ul>
+</section>

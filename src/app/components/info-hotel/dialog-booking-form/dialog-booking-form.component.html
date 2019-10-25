@@ -1,0 +1,184 @@
+<link
+  href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+  rel="stylesheet">
+<h2>Booking <h6>Let us know who you are!</h6></h2>
+<form #BookingForm="ngForm"> 
+<mat-horizontal-stepper>
+     
+        <mat-step label="Customer information">
+            
+          <div class="row">
+                <div class="col-md-7">
+                   
+                        <div class="form-group">
+                        
+                          <div class="row">
+                            <div class="col-md-6">
+                          <label for="exampleFormControlInput1">Firstname</label>
+                          <input type="text" class="form-control" id="exampleFormControlInput1" [(ngModel)]="BookingForm.name" name="name" >
+
+                            </div>
+                            <div class="col-md-6">
+                           <label for="exampleFormControlTextarea1">Lastname</label>
+                          <input class="form-control" id="exampleFormControlTextarea1" [(ngModel)]="BookingForm.Lastname" name="Lastname" >
+                            </div>
+                        </div>
+                        </div>
+                        <div class="form-group">
+                          <label for="exampleFormControlTextarea1">Email</label>
+                          <input type="email" class="form-control" id="exampleFormControlTextarea1"  [(ngModel)]="BookingForm.email" name="email" >
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-6">
+                                        <label for="exampleFormControlTextarea1">Phone number (optional)</label>
+                                        <input type="email" class="form-control" id="exampleFormControlTextarea1" [(ngModel)]="BookingForm.Phone" name="Phone" >
+                                        
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="exampleFormControlTextarea1">Country/region of residence</label>
+                                    <input type="email" class="form-control" id="exampleFormControlTextarea1"  [(ngModel)]="BookingForm.Country" name="Country" >
+                               </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlSelect1">Let us know when you are arriving</label>
+                            <select class="form-control" id="exampleFormControlSelect1"  [(ngModel)]="BookingForm.time" name="time">
+                            <option>I don't know</option>
+                            <option>00.00-01.00</option>
+                            <option>01.00-02.00</option>
+                            <option>02.00-03.00</option>
+                            <option>03.00-04.00</option>
+                            <option>04.00-05.00</option>
+                            <option>05.00-06.00</option>
+                            <option>06.00-07.00</option>
+                            <option>07.00-08.00</option>
+                            <option>08.00-09.00</option>
+                            <option>09.00-10.00</option>
+                            <option>10.00-11.00</option>
+                            <option>11.00-12.00</option>
+                            <option>12.00-13.00</option>
+                            <option>13.00-14.00</option>
+                            <option>14.00-15.00</option>
+                            <option>15.00-16.00</option>
+                            <option>16.00-17.00</option>
+                            <option>17.00-18.00</option>
+                            <option>18.00-19.00</option>
+                            <option>19.00-20.00</option>
+                            <option>20.00-21.00</option>
+                            <option>21.00-22.00</option>
+                            <option>22.00-23.00</option>
+                            <option>23.00-24.00</option>
+                            <option>24.00-01.00(Next Day)</option>
+                             </select>
+                        </div>
+                       <!-- <div class="form-group">
+                          <mat-expansion-panel>
+                              <mat-expansion-panel-header>
+                                This is the expansion title
+                              </mat-expansion-panel-header>
+                            
+                              <p>This is the primary content of the panel.</p>
+                            
+                          </mat-expansion-panel><br>
+                     
+                          <mat-expansion-panel>
+                              <mat-expansion-panel-header>
+                                This is the expansion title
+                              </mat-expansion-panel-header>
+                            
+                              <p>This is the primary content of the panel.</p>
+                            
+                          </mat-expansion-panel>   
+                       </div>
+                         -->
+                        
+                </div>
+                <div class="col-md-5">
+                        <div class="card mb-3" style="max-width: 540px;">
+                                <div class="row no-gutters">
+                                  <div class="col-md-2">
+                                    <img src="assets/555555.jpg"  class="card-img" alt="...">
+                                  </div>
+                                  <div class="col-md-10">
+                                    <div class="card-body">
+                                      
+                                      <h5 class="card-title">Hotel <input matInput  placeholder="hotel"   [(ngModel)]="BookingForm.hotelname" name="hotelname"></h5>
+                                      <h5 class="card-text">Room : <input matInput  placeholder="room"   [(ngModel)]="BookingForm.roomname" name="roomname"></h5>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <br>
+                        <div class="card mb-3" >
+                                <div class="card-body">
+                                  <h5 class="card-title">Time&People</h5> 
+                                   <div class="form-group">
+                                    <div class="row checkin-out">
+                                      <div class="col-md-12">
+                                          <input matInput [matDatepicker]="picker" placeholder="Check in "   [(ngModel)]="BookingForm.checkin" name="checkin">
+                                          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                                          <mat-datepicker #picker></mat-datepicker>
+                                          <input matInput [matDatepicker]="pickerD" placeholder="Check out "   [(ngModel)]="BookingForm.checkout" name="checkout">
+                                          <mat-datepicker-toggle matSuffix [for]="pickerD"></mat-datepicker-toggle>
+                                          <mat-datepicker #pickerD></mat-datepicker>
+                                      
+                                      </div>
+                                       
+                                    </div>
+                                        
+                                   </div>
+                                      <label for="exampleFormControlSelect1">people</label>
+                                      <select class="form-control" id="exampleFormControlSelect1" [(ngModel)]="BookingForm.people" name="people" >
+                                      <option>adult</option>
+                                      <option>kids</option>
+                                      </select>
+                                </div>
+                                <div class="card-body">
+                                   <h5 class="card-title">Price</h5>
+                                   <input type="text" placeholder="codePromotion"> &nbsp; <button class="btn btn-primary">use</button>
+                                  
+                            </div>
+                    </div>
+                </div>
+            </div>
+             <!-- </form> -->
+        </mat-step>
+        <mat-step label="Payment information">
+          <!-- <form    class="booking" #BookingForm="ngForm"> -->
+              <div class="row">
+                  <div class="col-md-6">
+                  <label for="exampleFormControlInput1">Bank</label>
+                  <input type="text" class="form-control" id="exampleFormControlInput1" [(ngModel)]="BookingForm.Bank" name="Bank" >
+                  <label for="exampleFormControlInput1">Date&Time</label>
+                  <input type="text" class="form-control" id="exampleFormControlInput1" [(ngModel)]="BookingForm.dateandtime" name="dateandtime" >
+                  <label for="exampleFormControlInput1">amount</label>
+                  <input type="text" class="form-control" id="exampleFormControlInput1" [(ngModel)]="BookingForm.amount" name="amount" >
+               </div>
+               <div class="col-md-6">
+                  
+                      <h3>Choose File</h3>            
+                      <div class="form-group">
+                          <input type="file" name="image" (change)="fileProgress($event)"  [(ngModel)]="BookingForm.slipmoney" name="slipmoney"  />
+                      </div>
+                      <div *ngIf="fileUploadProgress">
+                          Upload progress: {{ fileUploadProgress }}
+                      </div>
+                      <div class="image-preview mb-3" *ngIf="previewUrl">
+                          <img [src]="previewUrl" height="300" />                 
+                      </div>
+           
+                      <div class="mb-3" *ngIf="uploadedFilePath">
+                          {{uploadedFilePath}}
+                      </div>
+               </div>
+              </div>
+         <!-- </form> -->
+        </mat-step>
+        <mat-step label="Booking is confirmed!">
+          <button class="btn btn-primary" type="submit" (click)="Booking(BookingForm)">Submit</button>
+          
+        </mat-step>
+      
+    </mat-horizontal-stepper>
+  </form>
